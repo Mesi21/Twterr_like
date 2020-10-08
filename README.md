@@ -1,3 +1,5 @@
+# Soon to be updated...
+
 # Project: SOCIAL MEDIA APP 
 
   A social media project, built to be similar to Twitter.
