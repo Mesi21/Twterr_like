@@ -15,6 +15,7 @@ gem 'jquery-rails'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'gravatar_image_tag', '~> 1.2'
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
