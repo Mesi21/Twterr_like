@@ -8,6 +8,7 @@
       <div class="media-content">
       </div>
     </article>
+    <hr>
 </div>
 
 <% @twts.each do |twt| %>
@@ -24,7 +25,17 @@
           <small>@Mesi18</small><br />
           <p><%= twt.twt %></p>
         </div>
+        <nav class="level">
+          <div class="container-fluid level-left">
+            <% link_to twt, class: "level-item" do %>
+              <span class="icon">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </span>
+            <% end %>
+          </div>
+        </nav>
       </div>
     </article>
+    <hr>
   </div>
 <% end %>
