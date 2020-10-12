@@ -1,0 +1,30 @@
+<div class="col">
+    <article class="media-box">
+      <figure class="media-left">
+        <p class="img-circle">
+            <img src="https://via.placeholder.com/65" class="img-circle">
+        </p>
+      </figure>
+      <div class="media-content">
+      </div>
+    </article>
+</div>
+
+<% @twts.each do |twt| %>
+  <div class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="img-circle">
+          <img src="https://via.placeholder.com/65" class="img-circle">
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <strong>Mesi</strong><br/ >
+          <small>@Mesi18</small><br />
+          <p><%= twt.twt %></p>
+        </div>
+      </div>
+    </article>
+  </div>
+<% end %>

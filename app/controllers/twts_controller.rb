@@ -1,28 +1,20 @@
 class TwtsController < ApplicationController
   before_action :set_twt, only: [:show, :edit, :update, :destroy]
 
-  # GET /twts
-  # GET /twts.json
   def index
-    @twts = Twt.all
+    @twts = Twt.all.order('created_at DESC')
   end
 
-  # GET /twts/1
-  # GET /twts/1.json
   def show
   end
 
-  # GET /twts/new
   def new
     @twt = Twt.new
   end
 
-  # GET /twts/1/edit
   def edit
   end
 
-  # POST /twts
-  # POST /twts.json
   def create
     @twt = Twt.new(twt_params)
 
@@ -37,8 +29,6 @@ class TwtsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /twts/1
-  # PATCH/PUT /twts/1.json
   def update
     respond_to do |format|
       if @twt.update(twt_params)
@@ -51,8 +41,6 @@ class TwtsController < ApplicationController
     end
   end
 
-  # DELETE /twts/1
-  # DELETE /twts/1.json
   def destroy
     @twt.destroy
     respond_to do |format|
