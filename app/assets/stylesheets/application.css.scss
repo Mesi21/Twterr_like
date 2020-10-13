@@ -88,8 +88,36 @@
     flex-direction: row;
 }
 
+.media-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .col {
     display: flex;
-    flex-direction: col;
+    flex-direction: row;
     justify-content: space-evenly;
+}
+
+.level {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;;
+}
+
+.panel {
+    background-color: rgb(194, 194, 194);
+}
+
+.content-follow {
+    display: flex;
+    flex-direction: row;
+}
+
+.follow {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 15px;
 }

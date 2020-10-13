@@ -27,9 +27,19 @@
         </div>
         <nav class="level">
           <div class="container-fluid level-left">
-            <% link_to twt, class: "level-item" do %>
+            <%= link_to twt, class: "level-item" do %>
               <span class="icon">
                 <i class="fa fa-link" aria-hidden="true"></i>
+              </span>
+            <% end %>
+            <%= link_to edit_twt_path(twt), class: "level-item" do %>
+              <span class="icon">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </span>
+            <% end %>
+            <%= link_to twt, method: :delete, data: { confirm: "Are you sure?" }, class: "level-item" do %>
+              <span class="icon">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
               </span>
             <% end %>
           </div>
