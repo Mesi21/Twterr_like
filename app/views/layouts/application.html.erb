@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twterr</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %> 
+      <div class="alert alert-info" role="alert">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    <% if flash[:notice] %> 
+      <div class="alert alert-danger" role="alert">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+
+    <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+      <div class="nav-left">
+        <%= link_to root_path, class: "nav-brand" do %>
+          <h1>Twterr</h1>
+        <% end %>
+      </div>
+
+      <div id="navExample" class="nav-menu">
+          <div class="group">
+            <p class="control">
+              <%= link_to 'New Twt', new_twt_path, class: "btn btn-info" %>
+            </p>
+            <p class="control">Sign Up</p>
+          </div>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<div class="col">
+    <article class="media-box">
+      <figure class="media-left">
+        <p class="img-circle">
+            <img src="https://via.placeholder.com/65" class="img-circle">
+        </p>
+      </figure>
+      <div class="media-content">
+      </div>
+    </article>
+    <hr>
+</div>
+
+<% @twts.each do |twt| %>
+  <div class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="img-circle">
+          <img src="https://via.placeholder.com/65" class="img-circle">
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <strong>Mesi</strong><br/ >
+          <small>@Mesi18</small><br />
+          <p><%= twt.twt %></p>
+        </div>
+        <nav class="level">
+          <div class="container-fluid level-left">
+            <%= link_to twt, class: "level-item" do %>
+              <span class="icon">
+                <i class="fa fa-link" aria-hidden="true"></i>
+              </span>
+            <% end %>
+            <%= link_to edit_twt_path(twt), class: "level-item" do %>
+              <span class="icon">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+              </span>
+            <% end %>
+            <%= link_to twt, method: :delete, data: { confirm: "Are you sure?" }, class: "level-item" do %>
+              <span class="icon">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+              </span>
+            <% end %>
+          </div>
+        </nav>
+      </div>
+    </article>
+    <hr>
+  </div>
+<% end %>

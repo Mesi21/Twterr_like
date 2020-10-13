@@ -1,0 +1,123 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed,
+ figure, figcaption, footer, header, hgroup,
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline; 
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.nav-left {
+    width: 50%;
+}
+
+.nav-brand {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-brand:hover {
+    text-decoration: none;
+    color: rgb(146, 211, 237);
+}
+
+.nav-left h1 {
+    justify-content: flex-start;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.nav-menu {
+    width: 50%;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btn-info {
+    background-color: #fff !important;
+    color: #0a618f;
+    border: 0px;
+    margin-right: 10px;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+}
+
+.media-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.level {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;;
+}
+
+.panel {
+    background-color: rgb(194, 194, 194);
+}
+
+.content-follow {
+    display: flex;
+    flex-direction: row;
+}
+
+.follow {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(194, 194, 194);
+    padding: 15px;
+}
