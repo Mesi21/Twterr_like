@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class TwtsControllerTest < ActionDispatch::IntegrationTest
@@ -5,17 +7,17 @@ class TwtsControllerTest < ActionDispatch::IntegrationTest
     @twt = twts(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get twts_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_twt_url
     assert_response :success
   end
 
-  test "should create twt" do
+  test 'should create twt' do
     assert_difference('Twt.count') do
       post twts_url, params: { twt: { twt: @twt.twt } }
     end
@@ -23,22 +25,22 @@ class TwtsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to twt_url(Twt.last)
   end
 
-  test "should show twt" do
+  test 'should show twt' do
     get twt_url(@twt)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_twt_url(@twt)
     assert_response :success
   end
 
-  test "should update twt" do
+  test 'should update twt' do
     patch twt_url(@twt), params: { twt: { twt: @twt.twt } }
     assert_redirected_to twt_url(@twt)
   end
 
-  test "should destroy twt" do
+  test 'should destroy twt' do
     assert_difference('Twt.count', -1) do
       delete twt_url(@twt)
     end
