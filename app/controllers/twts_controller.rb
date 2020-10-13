@@ -1,19 +1,19 @@
+# frozen_string_literal: true
+
 class TwtsController < ApplicationController
-  before_action :set_twt, only: [:show, :edit, :update, :destroy]
+  before_action :set_twt, only: %i[show edit update destroy]
 
   def index
     @twts = Twt.all.order('created_at DESC')
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @twt = Twt.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @twt = Twt.new(twt_params)
@@ -50,13 +50,14 @@ class TwtsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_twt
-      @twt = Twt.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def twt_params
-      params.require(:twt).permit(:twt)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_twt
+    @twt = Twt.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def twt_params
+    params.require(:twt).permit(:twt)
+  end
 end
