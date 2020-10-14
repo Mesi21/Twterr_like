@@ -5,6 +5,7 @@ class TwtsController < ApplicationController
 
   def index
     @twts = Twt.all.order('created_at DESC')
+    @twt = Twt.new
   end
 
   def show; end
