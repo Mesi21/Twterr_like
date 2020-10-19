@@ -43,6 +43,7 @@
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+    background-color: #1b83bb !important;
 }
 
 .nav-left {
@@ -78,7 +79,7 @@
 
 .btn-info {
     background-color: #fff !important;
-    color: #0a618f;
+    color: #1b83bb !important;
     border: 0px;
     margin-right: 10px;
 }
@@ -89,6 +90,7 @@
     width: 100%;
     padding: 0px;
     margin: 0px;
+    width: 100%;
 }
 
 .media-content {
@@ -125,6 +127,14 @@
     padding: 0px 15px;
 }
 
+#media-lt {
+    width: 40%;
+}
+
+.content {
+    width: 60%;
+}
+
 .media-follow {
     display: flex;
     flex-direction: row;
@@ -137,8 +147,30 @@
 .media-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0px;
+    width: 80%;
+}
+
+.media-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.media-left {
+    width: 20%;
+}
+
+body > section > div > div > div.col-lg-3.box > article > div.media-content > div.container-fluid.level-left {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#submit {
+    background-color: #1b83bb !important;
+    color: #fff !important;
 }
 
 .panel-trends{
@@ -161,4 +193,17 @@
     padding: 0px 20px;
     text-decoration: none;
     color: rgb(126, 125, 125);
+}
+
+.label {
+    color: #000; 
+}
+
+.form-control {
+    border: 1px solid #1b83bb;
+}
+
+.field {
+    justify-content: flex-end;
+    width: 100%;
 }
