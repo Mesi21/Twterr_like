@@ -12,8 +12,8 @@
     <hr>
 </div>
 
-<% @twts.each do |twt| %>
-  <div class="col-lg-3 box ">
+<div class="col-lg-3" id="twts">
+  <% @twts.each do |twt| %>
     <article class="media">
       <div class="media-left" id="media-lt">
         <figure class="img-circle">
@@ -28,23 +28,17 @@
         </div>
         <div class="container-fluid level-left">
           <%= link_to twt, class: "level-item" do %>
-            <span class="icon">
-              <i class="fa fa-link" aria-hidden="true"></i>
-            </span>
+            <i class="fa fa-link" aria-hidden="true"></i>
           <% end %>
           <%= link_to edit_twt_path(twt), class: "level-item" do %>
-            <span class="icon">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-            </span>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
           <% end %>
           <%= link_to twt, method: :delete, data: { confirm: "Are you sure?" }, class: "level-item" do %>
-            <span class="icon">
-              <i class="fa fa-trash-o" aria-hidden="true"></i>
-            </span>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
           <% end %>
         </div>
       </div>
     </article>
     <hr>
-  </div>
-<% end %>
+  <% end %>
+</div>
