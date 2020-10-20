@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
 class TwtsController < ApplicationController
   before_action :set_twt, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @twts = Twt.all.order('created_at DESC')
@@ -21,7 +20,7 @@ class TwtsController < ApplicationController
 
     respond_to do |format|
       if @twt.save
-        format.html { redirect_to @twt, notice: 'Twt was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Twt was successfully created.' }
         format.json { render :show, status: :created, location: @twt }
       else
         format.html { render :new }
