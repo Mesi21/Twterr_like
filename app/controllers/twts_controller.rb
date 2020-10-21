@@ -10,13 +10,13 @@ class TwtsController < ApplicationController
   def show; end
 
   def new
-    @twt = Twt.new
+    @twt = current_user.twts.build
   end
 
   def edit; end
 
   def create
-    @twt = Twt.new(twt_params)
+    @twt = current_user.twts.build(twt_params)
 
     respond_to do |format|
       if @twt.save
