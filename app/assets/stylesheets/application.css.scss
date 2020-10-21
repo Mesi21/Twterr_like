@@ -172,7 +172,7 @@ body > div.alert.alert-info {
     width: 20%;
 }
 
-#submit {
+#submit, #submit-signup, #submit-login {
     background-color: #1b83bb !important;
     color: #fff !important;
     margin-top: 10px;
@@ -226,4 +226,10 @@ body > div.alert.alert-info {
 
 .field-signup {
     margin: 5px 0px 30px 0px;
+}
+
+.col-lg-6 h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;;
 }

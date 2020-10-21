@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_20_130853) do
+ActiveRecord::Schema.define(version: 2020_10_21_165739) do
 
   create_table "twts", force: :cascade do |t|
     t.text "twt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
