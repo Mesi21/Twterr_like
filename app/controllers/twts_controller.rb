@@ -1,6 +1,6 @@
 class TwtsController < ApplicationController
   before_action :set_twt, only: %i[show edit update destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
     @twts = Twt.all.order('created_at DESC')
