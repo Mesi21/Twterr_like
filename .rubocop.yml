@@ -39,7 +39,7 @@ Lint/RedundantSafeNavigation: # (new in 0.93)
 Lint/SelfAssignment: # (new in 0.89)
   Enabled: true
 Lint/TopLevelReturnWithArgument: # (new in 0.89)
-  Enabled: true
+  Enabled: false
 Lint/TrailingCommaInAttributeDeclaration: # (new in 0.90)
   Enabled: true
 Lint/UnreachableLoop: # (new in 0.89)
