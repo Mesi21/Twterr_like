@@ -1,4 +1,4 @@
-<div class="col">
+<div class="col-lg-6">
     <article class="media-box">
       <figure class="media-left">
         <p class="img-circle">
@@ -6,15 +6,16 @@
         </p>
       </figure>
       <div class="media-content">
+        <%= render 'twts/form' %>
       </div>
     </article>
     <hr>
 </div>
 
-<% @twts.each do |twt| %>
-  <div class="box">
+<div class="col-lg-3" id="twts">
+  <% @twts.each do |twt| %>
     <article class="media">
-      <div class="media-left">
+      <div class="media-left" id="media-lt">
         <figure class="img-circle">
           <img src="https://via.placeholder.com/65" class="img-circle">
         </figure>
@@ -25,27 +26,19 @@
           <small>@Mesi18</small><br />
           <p><%= twt.twt %></p>
         </div>
-        <nav class="level">
-          <div class="container-fluid level-left">
-            <%= link_to twt, class: "level-item" do %>
-              <span class="icon">
-                <i class="fa fa-link" aria-hidden="true"></i>
-              </span>
-            <% end %>
-            <%= link_to edit_twt_path(twt), class: "level-item" do %>
-              <span class="icon">
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-              </span>
-            <% end %>
-            <%= link_to twt, method: :delete, data: { confirm: "Are you sure?" }, class: "level-item" do %>
-              <span class="icon">
-                <i class="fa fa-trash-o" aria-hidden="true"></i>
-              </span>
-            <% end %>
-          </div>
-        </nav>
+        <div class="container-fluid level-left">
+          <%= link_to twt, class: "level-item" do %>
+            <i class="fa fa-link" aria-hidden="true"></i>
+          <% end %>
+          <%= link_to edit_twt_path(twt), class: "level-item" do %>
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          <% end %>
+          <%= link_to twt, method: :delete, data: { confirm: "Are you sure?" }, class: "level-item" do %>
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          <% end %>
+        </div>
       </div>
     </article>
     <hr>
-  </div>
-<% end %>
+  <% end %>
+</div>

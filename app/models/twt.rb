@@ -1,4 +1,3 @@
-# frozen_string_literal: true
-
 class Twt < ApplicationRecord
+  belongs_to :user
 end

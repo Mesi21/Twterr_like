@@ -43,6 +43,7 @@
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+    background-color: #1b83bb !important;
 }
 
 .nav-left {
@@ -78,20 +79,30 @@
 
 .btn-info {
     background-color: #fff !important;
-    color: #0a618f;
+    color: #1b83bb !important;
     border: 0px;
     margin-right: 10px;
+}
+
+body > div.alert.alert-info {
+    margin-bottom: 0px;
 }
 
 .media {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
 }
 
 .media-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 .col {
@@ -103,21 +114,122 @@
 .level {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;;
+}
+
+.level-left {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
 }
 
 .panel {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(235, 235, 235);
 }
 
 .content-follow {
     display: flex;
     flex-direction: row;
+    padding: 0px 15px;
 }
 
-.follow {
+#media-lt {
+    width: 40%;
+}
+
+.level-item {
+    padding: 10px 15px 0px 0px;
+    
+}
+
+.content {
+    width: 60%;
+}
+
+.media-follow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 0px 15px;
+    margin: 0px;
+}
+
+.media-content {
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(194, 194, 194);
-    padding: 15px;
+    justify-content: flex-start;
+    margin: 0px;
+    width: 80%;
+}
+
+.media-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.media-left {
+    width: 20%;
+}
+
+#submit, #submit-signup, #submit-login {
+    background-color: #1b83bb !important;
+    color: #fff !important;
+    margin-top: 10px;
+}
+
+.panel-trends{
+    border: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+}
+
+.panel-heading-trends {
+    display: flex;
+    background-color: rgb(235, 235, 235);
+    margin-bottom: 25px;
+    padding: 0px 20px;
+    height: 40px;
+    align-items: center;
+    color: rgb(126, 125, 125);
+}
+
+.panel-block {
+    padding: 0px 20px;
+    text-decoration: none;
+    color: rgb(126, 125, 125);
+}
+
+.label {
+    color: #000;
+    font-size: 1rem; 
+    padding: 0px;
+}
+
+.form-control {
+    border: 1px solid #1b83bb;
+}
+
+.field {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+ #twts {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered {
+    margin: auto;
+}
+
+.field-signup {
+    margin: 5px 0px 30px 0px;
+}
+
+.col-lg-6 h1 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 30px;;
 }
